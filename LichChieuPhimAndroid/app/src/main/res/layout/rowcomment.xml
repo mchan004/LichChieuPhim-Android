@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Le Xuan Thanh Tu"
+            android:id="@+id/lvCMName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|bold"
+            android:textSize="14sp" />
+
+
+        <TextView
+            android:text="(12/12/2016-16:22AM)"
+            android:id="@+id/lvCMDatetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal|italic"
+            android:layout_marginLeft="5dp"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp">
+        <TextView
+            android:text="Đánh giá phim này: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBarLVCM"
+            style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+            android:numStars="5"
+            android:rating="4" />
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:text="Phim này cực dở lun mọi người đừng coi phí tiền."
+        android:id="@+id/lvCMComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"/>
+
+
+
+</LinearLayout>
