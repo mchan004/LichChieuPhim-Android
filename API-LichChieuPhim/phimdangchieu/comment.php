@@ -2,7 +2,7 @@
 include "../config.php";
   try {
     $conn = new PDO("mysql:host=".$host.";dbname=".$nameDB.";charset=utf8", $userDB, $passDB);
-    $stmt = $conn->prepare("select * from CommentPhimdangchieu AS A INNER JOIN DanhSachPhim AS B ON A.idPhim=B.TenPhim WHERE B.id=".$_GET['id']);
+    $stmt = $conn->prepare("select A.id, A.idPhim, A.Name, A.Email, A.Rate, A.DateCreate, A.Comment from CommentPhimdangchieu AS A INNER JOIN DanhSachPhim AS B ON A.idPhim=B.TenPhim WHERE B.id=".$_GET['id']);
 	  $stmt->execute();
 
 $DSPhims = array();
