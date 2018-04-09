@@ -20,13 +20,16 @@ $DSPhim=array(
   "NoiDung" => array(),
 );
 $i=0;
-foreach($html->find('.inner h4 a') as $element)
+foreach($html->find('#tab_onshow .watchmovie-item') as $element)
 {
+	//echo $element->find('img')[0]->src;
+	//echo $element->find('a')[0]->h;
+
   $DSPhim['STT'] = $i;
-  $DSPhim['TenPhim'][$i]=mb_strtoupper(html_entity_decode($element->plaintext));
-  $DSPhim['Keywords'][$i]=preg_split("/[\s,:\/\\\]+/", mb_strtoupper(html_entity_decode($element->plaintext)));
-  $DSPhim['Galaxy'][$i]=$element->href;
-  $i++;
+  $DSPhim['TenPhim'][$i]=mb_strtoupper(html_entity_decode($element->find('h4')[0]->plaintext));
+  $DSPhim['Keywords'][$i]=preg_split("/[\s,:\/\\\]+/", mb_strtoupper(html_entity_decode($element->find('h4')[0]->plaintext)));
+  $DSPhim['Galaxy'][$i]="https://www.galaxycine.vn".$element->find('a')[0]->href;
+  $i++; 
 }
 
 // CGV
